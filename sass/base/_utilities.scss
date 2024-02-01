@@ -1,0 +1,57 @@
+.bg-secondary {
+  padding: 0.5rem 1rem;
+  background-color: $color-secondary-dark;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+.inline {
+  display: inline-block !important;
+}
+.pt-sm {
+  padding-top: 1.5rem !important;
+}
+.pt-md {
+  padding-top: 4rem !important;
+}
+.pb-sm {
+  padding-bottom: 1.5rem !important;
+}
+.pb-md {
+  padding-bottom: 4rem !important;
+}
+.pl-sm {
+  padding-left: 1.5rem !important;
+}
+.ml-sm {
+  margin-left: 1.5rem !important;
+}
+.ml-md {
+  margin-left: 2.4rem !important;
+}
+.mb-sm {
+  margin-bottom: 1.5rem !important;
+}
+.mb-md {
+  margin-bottom: 4rem !important;
+
+  // @include respond(tab-port) {
+  //   margin-bottom: 3rem !important;
+  // }
+}
+.mb-lg {
+  margin-bottom: 8rem !important;
+
+  // @include respond(tab-port) {
+  //   margin-bottom: 5rem !important;
+  // }
+}
+
+.mt-lg {
+  margin-top: 8rem !important;
+}
+.mt-xl {
+  margin-top: 10rem !important;
+}

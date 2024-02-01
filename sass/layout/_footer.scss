@@ -1,0 +1,63 @@
+.footer {
+  width: 100%;
+  padding: 4.8rem 6.4rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 2.4rem;
+  }
+
+  &__school-desc {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  &__school-loc {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  &__school-links {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  &__school-map {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+  &__socmed {
+    display: flex;
+    gap: 1.2rem;
+  }
+  &__school-img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+  &__icon {
+    width: 3rem;
+    height: auto;
+    object-fit: contain;
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.frame-maps {
+  width: 25rem;
+  object-fit: cover;
+}
+
+.socmed-logo {
+  width: 3rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.item {
+  display: flex;
+  gap: 1.6rem;
+}

@@ -1,0 +1,59 @@
+.section-hero {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.95),
+      rgba($color-primary-dark, 0.95)
+    ),
+    url(../img/insanaulia-building.jpg);
+  background-size: cover;
+  background-position: top;
+  padding: 6.4rem 0;
+
+  &__container {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    align-items: center;
+  }
+
+  &__img-box {
+    display: grid;
+    position: relative;
+    place-items: end;
+  }
+
+  &__img {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 100%;
+    border: 5px dotted $color-grey-light-1;
+    padding: 0.8rem;
+    box-shadow: 0 0px 3px 3px rgba($color-white, 0.2);
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .container-btn {
+    display: flex;
+    gap: 2.4rem;
+  }
+}
+
+.container-img {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
