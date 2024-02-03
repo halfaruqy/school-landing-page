@@ -1,9 +1,12 @@
 .cta {
   background-image: linear-gradient(
-    to right bottom,
-    rgba($color-primary-light, 0.95),
-    rgba($color-primary-dark, 0.95)
-  );
+      to right bottom,
+      rgba($color-primary-light, 0.95),
+      rgba($color-primary-dark, 0.95)
+    ),
+    url(../img/insanaulia-building.jpg);
+  background-size: cover;
+  background-position: top;
 
   padding: 7.2rem 3.6rem;
 
