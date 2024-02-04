@@ -13,6 +13,41 @@ header {
   background-color: rgba($color-primary, 0.9);
   box-shadow: 0px 3px 5px rgba($color-black, 0.15);
   color: $color-grey-dark-2;
+  position: relative;
+
+  &__container {
+    display: flex;
+    gap: 7.2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 3.6rem;
+      background-color: rgba($color-primary, 0.8);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 100vh;
+
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in;
+
+      /* 1) Hide it visually */
+      opacity: 0;
+
+      /* 2) Make it unaccessible to mouse and keyboard */
+      pointer-events: none;
+
+      /* 3) Hide it from screen readers */
+      visibility: hidden;
+    }
+  }
 
   &__home {
     display: flex;
@@ -63,6 +98,11 @@ header {
     font-weight: 500;
     text-transform: uppercase;
     gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2.4rem;
+      flex-direction: column;
+    }
 
     &-item {
       a {
@@ -115,9 +155,76 @@ header {
       }
     }
   }
+}
 
-  &__cta {
-    display: flex;
-    align-items: center;
+.nav-open {
+  .btn-mobile-nav {
+    background-color: transparent;
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    &::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+  .nav__container {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    width: 75%;
+  }
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background-color: $color-white;
+    position: relative;
+    align-self: center;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 0.25rem;
+      background-color: $color-white;
+      display: inline-block;
+
+      @media only screen and (max-width: $bp-large) {
+        height: 0.3rem;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: -0.8rem;
+
+      @media only screen and (max-width: $bp-large) {
+        top: -1rem;
+      }
+    }
+    &::after {
+      top: 0.8rem;
+
+      @media only screen and (max-width: $bp-large) {
+        top: 1rem;
+      }
+    }
   }
 }

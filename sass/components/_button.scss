@@ -4,8 +4,9 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1rem 2rem;
-    display: inline-block;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;

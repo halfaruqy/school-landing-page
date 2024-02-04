@@ -3,6 +3,10 @@
   margin: 0 auto;
   max-width: 110rem;
 
+  @media only screen and (max-width: $bp-large) {
+    padding: 7.2rem 2.4rem;
+  }
+
   &__container {
     background-image: linear-gradient(
         to right bottom,
@@ -18,12 +22,24 @@
     justify-items: center;
     gap: 1.6rem;
 
+    @media only screen and (max-width: $bp-large) {
+      min-width: 60rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 3.2rem;
+      justify-items: stretch;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      max-width: 58rem;
+    }
+
+    // SCROLLING PARALLAX EFFECT ON BACKGROUND IMAGE
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    min-height: 10vw;
   }
 
   &__item {
@@ -32,13 +48,21 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 1fr 3fr 1fr;
-    column-gap: 12px;
+    grid-template-columns: max-content 2fr 2fr;
+    column-gap: 1.2rem;
     row-gap: 0.6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      justify-items: start;
+    }
 
     &:not(:last-child) {
       padding-right: 2.4rem;
       border-right: 1px solid white;
+
+      @media only screen and (max-width: $bp-large) {
+        border: none;
+      }
     }
 
     &-img {
@@ -47,6 +71,10 @@
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
       align-self: center;
+
+      @media only screen and (max-width: $bp-large) {
+        justify-self: start;
+      }
     }
     &-title {
       grid-column: 2 / 3;
@@ -62,6 +90,11 @@
       align-self: start;
       line-height: 1.05;
       font-size: 1.6rem;
+
+      @media only screen and (max-width: $bp-large) {
+        text-align: start;
+        line-break: loose;
+      }
     }
     &-metric {
       display: inline-block;
@@ -71,6 +104,7 @@
       grid-column: 3 / span 1;
       grid-row: 1 / span 2;
       align-self: center;
+      justify-self: center;
       font-size: 3.6rem;
       font-weight: 900;
 
@@ -89,6 +123,10 @@
 
     &:last-child > &-metric {
       font-size: 2.4rem;
+
+      @media only screen and (max-width: $bp-large) {
+        font-size: 3.2rem;
+      }
     }
   }
 }

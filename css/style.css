@@ -7,6 +7,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
 
 body {
   box-sizing: border-box; }
@@ -115,7 +124,34 @@ header {
   padding: 1rem 2rem;
   background-color: rgba(247, 103, 7, 0.9);
   box-shadow: 0px 3px 5px rgba(13, 13, 13, 0.15);
-  color: #444444; }
+  color: #444444;
+  position: relative; }
+  .nav__container {
+    display: flex;
+    gap: 7.2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__container {
+        font-size: 3.6rem;
+        background-color: rgba(247, 103, 7, 0.8);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in;
+        /* 1) Hide it visually */
+        opacity: 0;
+        /* 2) Make it unaccessible to mouse and keyboard */
+        pointer-events: none;
+        /* 3) Hide it from screen readers */
+        visibility: hidden; } }
   .nav__home {
     display: flex;
     align-items: center;
@@ -152,6 +188,10 @@ header {
     font-weight: 500;
     text-transform: uppercase;
     gap: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__list {
+        font-size: 2.4rem;
+        flex-direction: column; } }
     .nav__list-item a {
       padding: 1.2rem 0;
       cursor: pointer;
@@ -181,16 +221,67 @@ header {
       height: 0.5px;
       width: 50%;
       border-top: 1.5px solid rgba(140, 233, 154, 0.85); }
-  .nav__cta {
-    display: flex;
-    align-items: center; }
 
-.section-hero {
+.nav-open .btn-mobile-nav {
+  background-color: transparent; }
+  .nav-open .btn-mobile-nav::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .nav-open .btn-mobile-nav::after {
+    top: 0;
+    transform: rotate(-135deg); }
+
+.nav-open .nav__container {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  width: 75%; }
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .btn-mobile-nav {
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background-color: #fff;
+      position: relative;
+      align-self: center; }
+      .btn-mobile-nav, .btn-mobile-nav::before, .btn-mobile-nav::after {
+        width: 3rem;
+        height: 0.25rem;
+        background-color: #fff;
+        display: inline-block; } }
+    @media only screen and (max-width: 56.25em) and (max-width: 68.75em) {
+      .btn-mobile-nav, .btn-mobile-nav::before, .btn-mobile-nav::after {
+        height: 0.3rem; } }
+  @media only screen and (max-width: 56.25em) {
+      .btn-mobile-nav::before, .btn-mobile-nav::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s; }
+      .btn-mobile-nav::before {
+        top: -0.8rem; } }
+    @media only screen and (max-width: 56.25em) and (max-width: 68.75em) {
+      .btn-mobile-nav::before {
+        top: -1rem; } }
+  @media only screen and (max-width: 56.25em) {
+      .btn-mobile-nav::after {
+        top: 0.8rem; } }
+    @media only screen and (max-width: 56.25em) and (max-width: 68.75em) {
+      .btn-mobile-nav::after {
+        top: 1rem; } }
+
+.hero {
   background-image: linear-gradient(to right bottom, rgba(255, 146, 43, 0.95), rgba(217, 72, 15, 0.95)), url(../img/insanaulia-building.jpg);
   background-size: cover;
   background-position: top;
   padding: 6.4rem 0; }
-  .section-hero__container {
+  .hero__container {
     max-width: 110rem;
     margin: 0 auto;
     padding: 0 3.2rem;
@@ -198,11 +289,11 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
     align-items: center; }
-  .section-hero__img-box {
+  .hero__img-box {
     display: grid;
     position: relative;
     place-items: end; }
-  .section-hero__img {
+  .hero__img {
     padding: 1rem;
     width: 100%;
     border-radius: 100%;
@@ -210,7 +301,7 @@ header {
     padding: 0.8rem;
     box-shadow: 0 0px 3px 3px rgba(255, 255, 255, 0.2);
     backface-visibility: hidden; }
-  .section-hero__text {
+  .hero__text {
     position: absolute;
     left: 50%;
     display: flex;
@@ -218,7 +309,7 @@ header {
     text-align: center;
     height: 100%;
     width: 100%; }
-  .section-hero .container-btn {
+  .hero .container-btn {
     display: flex;
     gap: 2.4rem; }
 
@@ -232,6 +323,9 @@ header {
   padding: 7.2rem 0;
   margin: 0 auto;
   max-width: 110rem; }
+  @media only screen and (max-width: 68.75em) {
+    .features {
+      padding: 7.2rem 2.4rem; } }
   .features__container {
     background-image: linear-gradient(to right bottom, rgba(140, 233, 154, 0.9), rgba(34, 142, 54, 0.9)), url(../img/insanaulia-building.jpg);
     box-shadow: 0 2px 10px rgba(13, 13, 13, 0.5);
@@ -243,25 +337,44 @@ header {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 10vw; }
+    background-size: cover; }
+    @media only screen and (max-width: 68.75em) {
+      .features__container {
+        min-width: 60rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3.2rem;
+        justify-items: stretch; } }
+    @media only screen and (max-width: 37.5em) {
+      .features__container {
+        max-width: 58rem; } }
   .features__item {
     color: #fff;
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 1fr 3fr 1fr;
-    column-gap: 12px;
+    grid-template-columns: max-content 2fr 2fr;
+    column-gap: 1.2rem;
     row-gap: 0.6rem; }
+    @media only screen and (max-width: 68.75em) {
+      .features__item {
+        justify-items: start; } }
     .features__item:not(:last-child) {
       padding-right: 2.4rem;
       border-right: 1px solid white; }
+      @media only screen and (max-width: 68.75em) {
+        .features__item:not(:last-child) {
+          border: none; } }
     .features__item-img {
       width: 3rem;
       height: 3rem;
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
       align-self: center; }
+      @media only screen and (max-width: 68.75em) {
+        .features__item-img {
+          justify-self: start; } }
     .features__item-title {
       grid-column: 2 / 3;
       align-self: end;
@@ -275,6 +388,10 @@ header {
       align-self: start;
       line-height: 1.05;
       font-size: 1.6rem; }
+      @media only screen and (max-width: 68.75em) {
+        .features__item-desc {
+          text-align: start;
+          line-break: loose; } }
     .features__item-metric {
       display: inline-block;
       line-break: strict;
@@ -283,6 +400,7 @@ header {
       grid-column: 3 / span 1;
       grid-row: 1 / span 2;
       align-self: center;
+      justify-self: center;
       font-size: 3.6rem;
       font-weight: 900; }
       .features__item-metric sup {
@@ -293,6 +411,9 @@ header {
       font-size: 1.4rem; }
     .features__item:last-child > .features__item-metric {
       font-size: 2.4rem; }
+      @media only screen and (max-width: 68.75em) {
+        .features__item:last-child > .features__item-metric {
+          font-size: 3.2rem; } }
 
 .benefit {
   padding: 7.2rem 0;
@@ -614,8 +735,9 @@ header {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 2rem;
-  display: inline-block;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
