@@ -10,9 +10,8 @@ header {
   height: auto;
   padding: 1rem 2rem;
   // background-color: rgba($color-grey-light-1, 0.9);
-  background-color: rgba($color-primary, 0.9);
+  background-color: rgba($color-grey-light-1, 0.9);
   box-shadow: 0px 3px 5px rgba($color-black, 0.15);
-  color: $color-grey-dark-2;
   position: relative;
 
   &__container {
@@ -21,7 +20,7 @@ header {
 
     @media only screen and (max-width: $bp-medium) {
       font-size: 3.6rem;
-      background-color: rgba($color-primary, 0.8);
+      background-color: rgba($color-grey-light-1, 0.8);
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(10px);
       position: absolute;
@@ -54,8 +53,8 @@ header {
     align-items: center;
     gap: 1rem;
     text-decoration: none;
-    // color: $color-grey-dark-2;
-    color: $color-white;
+    color: $color-grey-dark-3;
+    // color: $color-white;
     backface-visibility: hidden;
 
     &-logo {
@@ -86,7 +85,7 @@ header {
 
     &:hover &-text {
       // color: $color-primary;
-      color: $color-secondary-light;
+      color: $color-primary;
     }
   }
 
@@ -109,7 +108,7 @@ header {
         padding: 1.2rem 0;
         cursor: pointer;
         transition: all 0.2s;
-        color: $color-grey-light-1;
+        color: $color-grey-dark-3;
       }
 
       &::after {
@@ -118,7 +117,7 @@ header {
         height: 0.5px;
         width: 0%;
         // border-top: 1.5px solid $color-primary;
-        border-top: 1.5px solid $color-white;
+        border-top: 1.5px solid $color-grey-dark-3;
         transition: all 0.2s;
       }
 
@@ -128,7 +127,7 @@ header {
         &:hover {
           background-position: 100%;
           // color: $color-primary;
-          color: $color-secondary-light;
+          color: $color-primary;
           &::after {
             width: 100%;
           }
@@ -141,8 +140,8 @@ header {
 
       &:hover {
         a {
-          // color: $color-primary;
-          color: rgba($color-secondary-light, 0.85);
+          color: $color-primary;
+          // color: rgba($color-primary, 0.85);
         }
         &::after {
           content: "";
@@ -150,7 +149,7 @@ header {
           height: 0.5px;
           width: 50%;
           // border-top: 1.5px solid $color-primary;
-          border-top: 1.5px solid rgba($color-secondary-light, 0.85);
+          border-top: 1.5px solid rgba($color-primary, 0.85);
         }
       }
     }

@@ -122,9 +122,8 @@ header {
   justify-content: space-between;
   height: auto;
   padding: 1rem 2rem;
-  background-color: rgba(247, 103, 7, 0.9);
+  background-color: rgba(247, 247, 247, 0.9);
   box-shadow: 0px 3px 5px rgba(13, 13, 13, 0.15);
-  color: #444444;
   position: relative; }
   .nav__container {
     display: flex;
@@ -132,7 +131,7 @@ header {
     @media only screen and (max-width: 56.25em) {
       .nav__container {
         font-size: 3.6rem;
-        background-color: rgba(247, 103, 7, 0.8);
+        background-color: rgba(247, 247, 247, 0.8);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(10px);
         position: absolute;
@@ -157,7 +156,7 @@ header {
     align-items: center;
     gap: 1rem;
     text-decoration: none;
-    color: #fff;
+    color: #1c1c1c;
     backface-visibility: hidden; }
     .nav__home-logo {
       display: block;
@@ -179,7 +178,7 @@ header {
       backface-visibility: hidden;
       transition: all 0.2s; }
     .nav__home:hover .nav__home-text {
-      color: #8ce99a; }
+      color: #f76707; }
   .nav__list {
     display: flex;
     align-items: center;
@@ -196,31 +195,31 @@ header {
       padding: 1.2rem 0;
       cursor: pointer;
       transition: all 0.2s;
-      color: #f7f7f7; }
+      color: #1c1c1c; }
     .nav__list-item::after {
       content: "";
       display: block;
       height: 0.5px;
       width: 0%;
-      border-top: 1.5px solid #fff;
+      border-top: 1.5px solid #1c1c1c;
       transition: all 0.2s; }
     .nav__list-item:first-child {
       color: #1c1c1c; }
       .nav__list-item:first-child:hover {
         background-position: 100%;
-        color: #8ce99a; }
+        color: #f76707; }
         .nav__list-item:first-child:hover::after {
           width: 100%; }
       .nav__list-item:first-child::after {
         width: 80%; }
     .nav__list-item:hover a {
-      color: rgba(140, 233, 154, 0.85); }
+      color: #f76707; }
     .nav__list-item:hover::after {
       content: "";
       display: block;
       height: 0.5px;
       width: 50%;
-      border-top: 1.5px solid rgba(140, 233, 154, 0.85); }
+      border-top: 1.5px solid rgba(247, 103, 7, 0.85); }
 
 .nav-open .btn-mobile-nav {
   background-color: transparent; }
@@ -277,14 +276,23 @@ header {
         top: 1rem; } }
 
 .hero {
-  background-image: linear-gradient(to right bottom, rgba(255, 146, 43, 0.95), rgba(217, 72, 15, 0.95)), url(../img/insanaulia-building.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.96), rgba(247, 247, 247, 0.96)), url(../img/insanaulia-building.jpg);
   background-size: cover;
   background-position: top;
-  padding: 6.4rem 0; }
+  clip-path: polygon(100% 0%, 0% 0%, 0% 88.83%, 2.22% 88.6%, 4.44% 88.61%, 6.67% 88.85%, 8.89% 89.32%, 11.11% 89.99%, 13.33% 90.82%, 15.56% 91.76%, 17.78% 92.77%, 20% 93.78%, 22.22% 94.74%, 24.44% 95.59%, 26.67% 96.29%, 28.89% 96.8%, 31.11% 97.08%, 33.33% 97.13%, 35.56% 96.94%, 37.78% 96.52%, 40% 95.9%, 42.22% 95.1%, 44.44% 94.18%, 46.67% 93.19%, 48.89% 92.17%, 51.11% 91.2%, 53.33% 90.31%, 55.56% 89.57%, 57.78% 89.02%, 60% 88.68%, 62.22% 88.57%, 64.44% 88.71%, 66.67% 89.07%, 68.89% 89.65%, 71.11% 90.41%, 73.33% 91.31%, 75.56% 92.29%, 77.78% 93.31%, 80% 94.29%, 82.22% 95.2%, 84.44% 95.98%, 86.67% 96.58%, 88.89% 96.98%, 91.11% 97.14%, 93.33% 97.06%, 95.56% 96.75%, 97.78% 96.22%, 100% 95.5%);
+  padding: 7.2rem 0; }
+  .hero__subheading {
+    color: #1c1c1c;
+    background-color: transparent;
+    border-left: 3px solid #ff922b;
+    font-weight: 800; }
+  .hero__desc {
+    color: #626262; }
   .hero__container {
     max-width: 110rem;
     margin: 0 auto;
     padding: 0 3.2rem;
+    padding-bottom: 3.2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
@@ -297,9 +305,8 @@ header {
     padding: 1rem;
     width: 100%;
     border-radius: 100%;
-    border: 5px dotted #f7f7f7;
+    border: 5px dotted #ff922b;
     padding: 0.8rem;
-    box-shadow: 0 0px 3px 3px rgba(255, 255, 255, 0.2);
     backface-visibility: hidden; }
   .hero__text {
     position: absolute;
@@ -387,7 +394,7 @@ header {
       text-align: center;
       align-self: start;
       line-height: 1.05;
-      font-size: 1.6rem; }
+      font-size: 1.4rem; }
       @media only screen and (max-width: 68.75em) {
         .features__item-desc {
           text-align: start;
@@ -406,7 +413,7 @@ header {
       .features__item-metric sup {
         font-size: 1.2rem; }
     .features__item:nth-child(3) > .features__item-desc {
-      font-size: 1.4rem; }
+      font-size: 1.2rem; }
     .features__item:last-child > .features__item-desc {
       font-size: 1.4rem; }
     .features__item:last-child > .features__item-metric {
@@ -436,8 +443,8 @@ header {
     padding: 0 1.2rem;
     flex: 0 0 20%; }
   .benefit__item {
-    background-color: #fff;
-    border: 2px solid #626262;
+    background-color: transparent;
+    border: 3px solid rgba(217, 72, 15, 0.8);
     box-shadow: 15px 15px 0 #d7d7d7;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -445,7 +452,6 @@ header {
     .benefit__item-icon {
       background-color: #ff922b;
       border-radius: 50%;
-      border: 1px solid #1c1c1c;
       padding: 1.2rem;
       position: absolute;
       top: 0;
@@ -464,15 +470,13 @@ header {
     .benefit__item-img {
       grid-column: 2 / span 1;
       grid-row: 1 / span 2;
-      border-left: 5px solid #f76707;
+      z-index: 1;
       width: 100%;
       height: 32rem;
       object-fit: cover;
       transition: all 0.2s; }
     .benefit__item:nth-child(even) > .benefit__item-img {
-      grid-column: 1 / span 1;
-      border-right: 5px solid #f76707;
-      border-left: 0px solid #f76707; }
+      grid-column: 1 / span 1; }
     .benefit__item:nth-child(even) > .benefit__item-title {
       grid-column: 2 / span 1; }
     .benefit__item:nth-child(even) > .benefit__item-desc {
@@ -497,7 +501,8 @@ header {
   .section-features__title {
     grid-column: 1 / -1;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    font-size: 2.2rem; }
     .section-features__title h2 {
       padding: 0.5rem 1rem;
       text-transform: uppercase; }
@@ -795,8 +800,8 @@ header {
 
 .btn-cta--hero {
   font-weight: 600;
-  background-color: #fff;
-  color: #d9480f; }
+  background-color: #f76707;
+  color: #f7f7f7; }
 
 .btn-cta:hover {
   background-color: rgba(247, 103, 7, 0.85);
@@ -809,8 +814,8 @@ header {
 
 .btn-secondary:link, .btn-secondary:visited {
   font-size: 1.6rem;
-  background-color: #228e36;
-  color: #fff;
+  background-color: rgba(34, 142, 54, 0.8);
+  color: #f7f7f7;
   text-decoration: none;
   padding: 1rem 2rem;
   transition: all 0.2s; }
@@ -821,8 +826,8 @@ header {
   color: #d9480f; }
 
 .btn-secondary:hover {
-  background-color: rgba(34, 142, 54, 0.85);
-  box-shadow: 0 1rem 2rem rgba(255, 146, 43, 0.3);
+  background-color: rgba(34, 142, 54, 0.95);
+  box-shadow: 0 1rem 3rem rgba(28, 28, 28, 0.2);
   transform: translateY(-3px); }
 
 .btn-secondary:active {

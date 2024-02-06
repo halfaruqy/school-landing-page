@@ -84,8 +84,8 @@
 
   &--hero {
     font-weight: 600;
-    background-color: $color-white;
-    color: $color-primary-dark;
+    background-color: $color-primary;
+    color: $color-grey-light-1;
   }
 
   &:hover {
@@ -104,8 +104,8 @@
   &:link,
   &:visited {
     font-size: $default-font-size;
-    background-color: $color-secondary-dark;
-    color: $color-white;
+    background-color: rgba($color-secondary-dark, 0.8);
+    color: $color-grey-light-1;
     text-decoration: none;
     padding: 1rem 2rem;
     transition: all 0.2s;
@@ -118,8 +118,8 @@
   }
 
   &:hover {
-    background-color: rgba($color-secondary-dark, 0.85);
-    box-shadow: 0 1rem 2rem rgba($color-primary-light, 0.3);
+    background-color: rgba($color-secondary-dark, 0.95);
+    box-shadow: 0 1rem 3rem rgba($color-grey-dark-3, 0.2);
     transform: translateY(-3px);
   }
 
