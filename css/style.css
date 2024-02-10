@@ -234,25 +234,27 @@ header {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
-  width: 75%; }
+  width: 100%; }
 
 .btn-mobile-nav {
   border: none;
   background: none;
   cursor: pointer;
-  display: none; }
+  display: none;
+  visibility: hidden; }
   @media only screen and (max-width: 56.25em) {
     .btn-mobile-nav {
       display: block;
       width: 2rem;
       height: 2px;
-      background-color: #fff;
+      background-color: #1c1c1c;
       position: relative;
-      align-self: center; }
+      align-self: center;
+      visibility: visible; }
       .btn-mobile-nav, .btn-mobile-nav::before, .btn-mobile-nav::after {
         width: 3rem;
         height: 0.25rem;
-        background-color: #fff;
+        background-color: #1c1c1c;
         display: inline-block; } }
     @media only screen and (max-width: 56.25em) and (max-width: 68.75em) {
       .btn-mobile-nav, .btn-mobile-nav::before, .btn-mobile-nav::after {
@@ -276,18 +278,32 @@ header {
         top: 1rem; } }
 
 .hero {
-  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.96), rgba(247, 247, 247, 0.96)), url(../img/insanaulia-building.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.92), rgba(247, 247, 247, 0.92)), url(../img/insanaulia-building.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(100% 0%, 0% 0%, 0% 88.83%, 2.22% 88.6%, 4.44% 88.61%, 6.67% 88.85%, 8.89% 89.32%, 11.11% 89.99%, 13.33% 90.82%, 15.56% 91.76%, 17.78% 92.77%, 20% 93.78%, 22.22% 94.74%, 24.44% 95.59%, 26.67% 96.29%, 28.89% 96.8%, 31.11% 97.08%, 33.33% 97.13%, 35.56% 96.94%, 37.78% 96.52%, 40% 95.9%, 42.22% 95.1%, 44.44% 94.18%, 46.67% 93.19%, 48.89% 92.17%, 51.11% 91.2%, 53.33% 90.31%, 55.56% 89.57%, 57.78% 89.02%, 60% 88.68%, 62.22% 88.57%, 64.44% 88.71%, 66.67% 89.07%, 68.89% 89.65%, 71.11% 90.41%, 73.33% 91.31%, 75.56% 92.29%, 77.78% 93.31%, 80% 94.29%, 82.22% 95.2%, 84.44% 95.98%, 86.67% 96.58%, 88.89% 96.98%, 91.11% 97.14%, 93.33% 97.06%, 95.56% 96.75%, 97.78% 96.22%, 100% 95.5%);
-  padding: 7.2rem 0; }
+  padding: 4.8rem 0;
+  height: 85vh; }
+  @media only screen and (max-width: 56.25em) {
+    .hero {
+      height: 90vh; } }
   .hero__subheading {
     color: #1c1c1c;
     background-color: transparent;
     border-left: 3px solid #ff922b;
     font-weight: 800; }
+    @media only screen and (max-width: 56.25em) {
+      .hero__subheading {
+        border: none;
+        text-align: center;
+        font-size: 4.8rem;
+        line-height: 1.2; } }
   .hero__desc {
     color: #626262; }
+    @media only screen and (max-width: 56.25em) {
+      .hero__desc {
+        font-size: 1.8rem;
+        text-align: center; } }
   .hero__container {
     max-width: 110rem;
     margin: 0 auto;
@@ -297,25 +313,35 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .hero__container {
+        padding: 0;
+        grid-template-columns: auto;
+        gap: 7.2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .hero__text-box {
+      padding: 0 12.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .hero__text-box {
+      padding: 0 3.2rem; } }
   .hero__img-box {
     display: grid;
     position: relative;
     place-items: end; }
   .hero__img {
-    padding: 1rem;
     width: 100%;
     border-radius: 100%;
     border: 5px dotted #ff922b;
-    padding: 0.8rem;
-    backface-visibility: hidden; }
-  .hero__text {
-    position: absolute;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 100%; }
+    padding: 0.8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .hero__img {
+        border-radius: 0;
+        border: none;
+        padding: 0;
+        filter: brightness(90%); } }
   .hero .container-btn {
     display: flex;
     gap: 2.4rem; }
@@ -323,8 +349,7 @@ header {
 .container-img {
   display: flex;
   justify-content: flex-end;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 .features {
   padding: 7.2rem 0;
@@ -691,18 +716,26 @@ header {
     flex-wrap: wrap;
     align-items: start;
     gap: 2.4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__container {
+        gap: 4.8rem; } }
   .footer__school-desc {
     flex: 0 0 25%;
     max-width: 25%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__school-desc {
+        flex: 0 0 45%;
+        max-width: 45%; } }
   .footer__school-loc {
     flex: 0 0 25%;
     max-width: 25%; }
-  .footer__school-links {
-    flex: 0 0 20%;
-    max-width: 20%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__school-loc {
+        flex: 0 0 45%;
+        max-width: 45%; } }
   .footer__school-map {
-    flex: 0 0 30%;
-    max-width: 30%; }
+    flex: 0 0 45%;
+    max-width: 45%; }
   .footer__socmed {
     display: flex;
     gap: 1.2rem; }

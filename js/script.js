@@ -1,3 +1,8 @@
+// Set current year
+const yearEl = document.querySelector(".copyright-year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+///////////////////////////////////////////////////////////
 // Make mobile navigation work
 
 btnMobileNavEl = document.querySelector(".btn-mobile-nav");
@@ -32,11 +37,14 @@ allLinks.forEach(function (link) {
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
 
-    // Close mobile naviagtion
+    // Close mobile navigation
     if (
       link.classList.contains("nav__link") ||
       link.classList.contains("btn-cta--hero")
-    )
-      navEl.classList.toggle("nav-open");
+    ) {
+      if (navEl.classList.contains("nav-open")) {
+        navEl.classList.toggle("nav-open");
+      }
+    }
   });
 });

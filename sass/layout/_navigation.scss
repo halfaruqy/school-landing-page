@@ -172,7 +172,7 @@ header {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-    width: 75%;
+    width: 100%;
   }
 }
 
@@ -182,21 +182,23 @@ header {
   cursor: pointer;
 
   display: none;
+  visibility: hidden;
 
   @media only screen and (max-width: $bp-medium) {
     display: block;
     width: 2rem;
     height: 2px;
-    background-color: $color-white;
+    background-color: $color-grey-dark-3;
     position: relative;
     align-self: center;
+    visibility: visible;
 
     &,
     &::before,
     &::after {
       width: 3rem;
       height: 0.25rem;
-      background-color: $color-white;
+      background-color: $color-grey-dark-3;
       display: inline-block;
 
       @media only screen and (max-width: $bp-large) {
