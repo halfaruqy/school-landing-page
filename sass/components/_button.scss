@@ -104,8 +104,9 @@
   &:link,
   &:visited {
     font-size: $default-font-size;
-    background-color: rgba($color-secondary-dark, 0.8);
-    color: $color-grey-light-1;
+    background-color: rgba($color-grey-light-1, 0.8);
+    border: 1px solid $color-primary;
+    color: $color-grey-dark-3;
     text-decoration: none;
     padding: 1rem 2rem;
     transition: all 0.2s;
@@ -118,7 +119,7 @@
   }
 
   &:hover {
-    background-color: rgba($color-secondary-dark, 0.95);
+    background-color: rgba($color-grey-light-1, 0.85);
     box-shadow: 0 1rem 3rem rgba($color-grey-dark-3, 0.2);
     transform: translateY(-3px);
   }

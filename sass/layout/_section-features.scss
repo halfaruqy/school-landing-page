@@ -10,6 +10,11 @@
     row-gap: 4.8rem;
     column-gap: 5.2rem;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      max-width: 60rem;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
@@ -58,5 +63,10 @@
   &:hover {
     transform: translateY(-1.5rem);
     box-shadow: 0 1rem 5rem rgba($color-black, 0.15);
+
+    @media only screen and (max-width: $bp-medium) {
+      transform: translateY(0);
+      box-shadow: 1rem 1.5rem 4rem rgba($color-black, 0.15);
+    }
   }
 }
