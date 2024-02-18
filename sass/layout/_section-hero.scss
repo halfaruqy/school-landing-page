@@ -132,9 +132,12 @@
   &__img {
     width: 100%;
     border-radius: 100%;
+    object-fit: cover;
     border: 5px dotted $color-primary-light;
     padding: 0.8rem;
     @media only screen and (max-width: $bp-medium) {
+      height: 90%;
+      object-position: bottom;
       border-radius: 0;
       border: none;
       padding: 0;

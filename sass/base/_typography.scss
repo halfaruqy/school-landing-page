@@ -29,12 +29,10 @@ a {
   color: rgba($color-secondary-dark, 0.95);
   padding: 0 1rem;
   background-color: $color-white;
-
+  box-shadow: 0 0.5rem 6rem rgba($color-black, 0.2);
   &--alt {
-    color: rgba($color-secondary-dark, 0.95);
-    background-color: $color-white;
-    box-shadow: 0 1rem 5rem rgba($color-black, 0.2);
-    text-align: center;
+    text-transform: none;
+    font-weight: 600;
   }
 }
 
@@ -47,10 +45,10 @@ a {
 
 .paragraph {
   font-size: $default-font-size;
-  color: $color-grey-light-1;
+  color: $color-grey-dark-3;
   line-height: 1.2;
 
-  --alt {
+  &--alt {
     color: $color-grey-dark-3;
   }
 }
