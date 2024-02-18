@@ -4,6 +4,7 @@
   max-width: 110rem;
 
   &__container {
+    padding-top: 1.2rem;
     display: flex;
     justify-content: center;
     gap: 4.8rem;
@@ -12,13 +13,31 @@
   &__item {
     display: flex;
     flex-direction: column;
-    flex: 0 0 30%;
+    flex: 0 0 22%;
+    gap: 0.6rem;
+
+    background-color: rgba($color-secondary-light, 0.1);
+    border-radius: 5px;
+    padding: 3.6rem 2.4rem;
+    border: 1px solid rgba($color-primary, 0.5);
 
     &-icon {
       img {
-        width: 5rem;
-        height: 5rem;
+        width: 7rem;
+        height: 7rem;
+        padding: 1.2rem;
+        background-color: rgba($color-primary-light, 0.75);
+        border-radius: 3px;
+        color: $color-grey-light-2;
       }
+      align-self: center;
+    }
+    &-title {
+      align-self: center;
+      color: $color-secondary-dark-2;
+    }
+    &-desc {
+      color: $color-grey-dark-2;
     }
   }
 }
